@@ -1,0 +1,9 @@
+An input text file must be created prior to running.
+
+To Run (assume the input file name is input.txt):
+    On Host1: ubuntu2004-004.student.cs.uwaterloo.ca:
+        python3 network_emulator.py 13445 ubuntu2004-002.student.cs.uwaterloo.ca 13448 13447 ubuntu2004-014.student.cs.uwaterloo.ca 13446 1 0.2 0
+    On Host2: ubuntu2004-002.student.cs.uwaterloo.ca:
+        python3 receiver.py ubuntu2004-004.student.cs.uwaterloo.ca 13447 13448 output.txt
+    On Host3: ubuntu2004-014.student.cs.uwaterloo.ca:
+        python3 sender.py ubuntu2004-004.student.cs.uwaterloo.ca 13445 13446 50 input.txt
